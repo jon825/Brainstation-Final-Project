@@ -1,0 +1,39 @@
+.thumbnail img {
+  max-height: 150px;
+}
+
+.price{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#auth{
+  width:400px;
+  margin:100px auto;
+}
+  #auth .no-warning{
+    display:none;
+  }
+
+#RadarChart{
+  width:500px;
+  height:500px;
+  position:absolute;
+  left:600px;
+  top:270px;
+}
+.box{
+  height:300px;
+  width:300px
+}
+.selector{
+  float:right;
+
+
+}
