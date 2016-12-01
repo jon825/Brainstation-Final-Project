@@ -76,7 +76,7 @@ class View extends React.Component {
 
 
     componentWillMount() {
-        axios.get('http://localhost:3005/strains/' + this.props.params.strains)
+        axios.get('/strains/' + this.props.params.strains)
             .then(res => {
                 let resData = res.data
                 // console.log(resData)
