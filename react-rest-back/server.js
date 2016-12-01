@@ -23,11 +23,7 @@ app.use(function(req,res,next){
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-/* In your main JS file */
 
-app.get('*', function(req, res) {
-    res.sendFile(path.resolve(__dirname+'./../react-rest-front/build/index.html'));
-});
 
 
 // Create instance of Mongoose and connect to our local
@@ -110,6 +106,12 @@ app.use(express.static(__dirname + './../react-rest-front/build'));
 
 
 app.use('/api/users', userRoutes);
+
+/* In your main JS file */
+
+app.get('*', function(req, res) {
+    res.sendFile(path.resolve(__dirname+'./../react-rest-front/build/index.html'));
+});
 
 
 app.listen(PORT, function(){
