@@ -5,18 +5,18 @@ class ShoppingCart extends React.Component{
         // let price = this.props.totalprice
         super();
         this.state={
-           totalprice:price
+     
         }
 
     }
 
     
     render(){
-        console.log(this.state.totalprice)
+        console.log(this.props.totalprice)
         return(
             <div>
             Shopping Cart
-            {this.state.totalprice}
+            {this.props.totalprice}
             </div>
 
 
