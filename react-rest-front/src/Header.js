@@ -1,5 +1,7 @@
 import React from 'react';
 const axios = require('axios');
+import {Router, Route, browserHistory, Link} from 'react-router';
+
 
 class Header extends React.Component {
     constructor() {
