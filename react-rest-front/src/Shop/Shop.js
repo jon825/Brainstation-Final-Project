@@ -7,46 +7,54 @@ class Shop extends React.Component {
     constructor() {
         super();
         this.state = {
-            products: []
-
+            products: [],
+            quantity: 0,
+            totalprice: 0,
         }
-        this.handleClick = this.handleClick.bind(this)
+        this.handleClick = this.handleClick.bind(this);
 
     }
-    componentWillMount() {
-        axios.get('http://localhost:3005/strains')
-            .then(res => {
-                let products = res.data;
-                this.setState({
-                    products: products
 
-                })
-            })
-    }
     handleClick(index) {
-        let selectproduct = this.state.products
-        window.location.href = '/view/' + selectproduct[index].name
-
-        console.log(index)
+        let selectproduct = this.props.products
+        window.location.href = '/view/' + selectproduct[index].name;
+        // stopPropagation();
+        // console.log(index)
     }
 
-    render() {
+
+    // handleAddButton(i) {
+    //     let quantity = this.state.quantity + 1;
+    //     let productPrice = this.state.products[i].price;
+    //     let totalProducts = this.state.totalprice;
+    //     totalProducts = totalProducts + productPrice;
+    //     // console.log(totalProducts)
+    //     this.setState({
+    //         quantity: quantity,
+    //         totalprice:totalProducts
+
+    //     })
+    //     // console.log(this.state.totalprice)
+    // }
 
 
+render() {
+    console.log(this.props.products)
 
-        let productArray = [];
-        for (let i = 0; i < this.state.products.length; i++) {
-            productArray.push(<ProductItem key={i} handleClick={() => { this.handleClick(i) } } product={this.state.products[i]} />)
-        }
-        return (
-            <div className="container">
-                <div className="row">
-                    {productArray}
 
-                </div>
+    let productArray = [];
+    for (let i = 0; i < this.props.products.length; i++) {
+        productArray.push(<ProductItem key={i} index={i} handleClick={() => { this.handleClick(i) } } product={this.props.products[i]} handleAddButton = {this.props.handleAddButton} />)
+    }
+    return (
+        <div className="container">
+            <div className="row">
+                {productArray}
+
             </div>
-        )
-    }
+        </div>
+    )
+}
 }
 
 
@@ -57,7 +65,7 @@ class ProductItem extends React.Component {
         // console.log(productArray)
         return (
 
-            <div className="col-sm-6 col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="thumbnail" onClick={this.props.handleClick} >
                     <img src={this.props.product.imagePath} alt="..." />
                     <div className="caption">
@@ -65,7 +73,7 @@ class ProductItem extends React.Component {
                         <p>{this.props.product.strain_category}</p>
                         <div>
                             <div className="price">${this.props.product.price}</div>
-                            <a className="btn btn-primary" role="button">Add To Cart</a>
+                            <p><a className="btn btn-primary" role="button" onClick={(evt)=>{this.props.handleAddButton(this.props.index, evt)}}>Button</a></p>
                         </div>
                     </div>
                 </div>

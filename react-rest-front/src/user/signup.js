@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router';
 
 class SignUp extends Component {
   constructor(){
@@ -26,7 +27,7 @@ class SignUp extends Component {
       .then( (res) =>{
         
         console.log(res);
-        location.href = '/';
+        location.href = '/index';
 
       })
     }
@@ -52,6 +53,8 @@ class SignUp extends Component {
 
   render() {
     return (
+
+      
       <div id="auth">
         <h3>Sign Up Form</h3>
         <p className={"alert alert-danger "+ this.state.warning}>Age Restricted Content</p>
@@ -84,7 +87,11 @@ class SignUp extends Component {
             <button className="btn btn-primary">Sign Up</button>
           </div>
         </form>
+        <div>
+          <Link to = "/user/signin"> Sign In </Link>
+        </div>
       </div>
+      
     );
   }
 }

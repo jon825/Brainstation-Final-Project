@@ -18,16 +18,12 @@ class SignIn extends Component {
     axios
       .post('http://localhost:3005/api/users/login',this.state)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if(res.status === 200){
           localStorage.authToken = res.data.token;
-          location.href = '/';
+          location.href = '/index';
         }
-        /*
-          TASK 2: If the login request is successful, store the authToken from the server in localStorage
-            Once token is stored, redirect user to the main
-            If the login request was unsuccessful, do not redirect user and show a warning message.
-        */
+
       })
       .catch((err)=>{
           self.setState({

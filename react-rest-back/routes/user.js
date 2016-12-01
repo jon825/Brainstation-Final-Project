@@ -37,12 +37,25 @@ router.post('/encrypt',(req,res) => {
 });
 
 router.post('/login', (req,res) => {
-    console.log(req.body.password);
+    
     let email = req.body.email;
     let password = req.body.password;
-    fs.readFile('notpasswords/' + email + '.txt', (err,data) =>{
-        console.log(data)
-        bcrypt.compare(password, data.toString(), function(err,result){
+    console.log(email)
+
+    User.findOne({"email": req.body.email}, (err,data) =>{
+        // console.log(data.password)
+        if(data === null){
+            res
+            .status(403)
+            .send({data:null})
+
+        }
+        else{
+
+
+         bcrypt.compare(password, data.password.toString(), function(err,result){
+            console.log(result)
+
             if(result){
                 let token = jwt.sign({email:email}, 'brainstationkey');
                 res.json({token:token});
@@ -55,8 +68,13 @@ router.post('/login', (req,res) => {
             }
             
         })
+        console.log(data)
+
+        }
     })
 })
+
+
 
 router.get('/privatedata',authorize, (req,res) => {
     res.json('I am sensitive and protected user data');

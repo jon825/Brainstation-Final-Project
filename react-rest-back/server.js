@@ -2,9 +2,15 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const db = mongoose.connection;
-const PORT = 3005;
+
 const bodyParser = require('body-parser');
 const ProductAttributes = require('./models/productAttributes')
+
+// use the port value from the node environment, or 8080 if it can't be found'
+const PORT = process.env.PORT || 3005;
+// Change this from 8080 to 80
+
+
 
 const userRoutes = require('./routes/user')
 
@@ -28,6 +34,17 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
 	console.log("Connected to db at /data/db/")
 });
+
+
+
+// ProductAttributes.find({},(err, productAttributes) =>{
+//   if(err){
+//       console.log(err);
+//     }else{
+//       console.log(productAttributes)
+//     }
+//   })
+
 
 
 
@@ -88,7 +105,8 @@ app.post('/strains', (req,res) =>{
 app.use('/api/users', userRoutes);
 
 
-app.listen(PORT, () => {
-	console.log('Server Started on http://localhost:%s',PORT);
-	console.log('Press CTRL + C to stop server');
+app.listen(PORT, function(){
+	console.log("Listening on Port:%s",PORT)
+	console.log("Stop with Ctrl+C");
 });
+
