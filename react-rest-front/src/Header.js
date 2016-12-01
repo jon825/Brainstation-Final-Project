@@ -35,7 +35,7 @@ class Header extends React.Component {
 
         })
         e.stopPropagation()
-        console.log(this.state.totalprice)
+        console.log(this.state.quantity)
         console.log(e)
     }
 
