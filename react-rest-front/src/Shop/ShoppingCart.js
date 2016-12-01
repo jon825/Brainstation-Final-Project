@@ -4,15 +4,14 @@ class ShoppingCart extends React.Component{
     constructor(){
         super();
         this.state={
-            quantity:0,
-            price:0
+           
         }
 
     }
 
     
     render(){
-        console.log(this.props.products)
+        console.log(this.props.totalprice)
         return(
             <div>
             Shopping Cart
