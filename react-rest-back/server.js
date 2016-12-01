@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const db = mongoose.connection;
+const path = require('path');
 
 const bodyParser = require('body-parser');
 const ProductAttributes = require('./models/productAttributes')
@@ -23,6 +24,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 /* In your main JS file */
+
+app.get('*', function(req, res) {
+    res.sendFile(path.resolve(__dirname+'../.react-rest-front/build/index.html'));
+});
 
 
 // Create instance of Mongoose and connect to our local
