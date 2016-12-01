@@ -100,6 +100,8 @@ app.post('/strains', (req,res) =>{
   })
 })
 
+app.use(express.static(__dirname + './../react-rest-front/build'));
+
 
 
 app.use('/api/users', userRoutes);
