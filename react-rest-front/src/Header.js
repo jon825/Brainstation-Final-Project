@@ -77,7 +77,7 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </nav>
-                {React.cloneElement(this.props.children, { products: products, handleAddButton: this.handleAddButton.bind(this), totalprice: this.state.totalprice })}
+                {React.cloneElement(this.props.children, { products: products, handleAddButton: this.handleAddButton.bind(this), totalprice: this.state.totalprice , quantity: this.state.quantity})}
             </div>
         )
     }

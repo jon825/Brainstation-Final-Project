@@ -13,10 +13,12 @@ class ShoppingCart extends React.Component{
     
     render(){
         console.log(this.props.totalprice)
+        console.log(this.props.quantity)
         return(
             <div>
             Shopping Cart
             {this.props.totalprice}
+            {this.props.quantity}
             </div>
 
 
