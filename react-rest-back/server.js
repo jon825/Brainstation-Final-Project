@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /* In your main JS file */
 
 app.get('*', function(req, res) {
-    res.sendFile(path.resolve(__dirname+'../.react-rest-front/build/index.html'));
+    res.sendFile(path.resolve(__dirname+'./../react-rest-front/build/index.html'));
 });
 
 
