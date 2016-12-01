@@ -35,7 +35,6 @@ class Header extends React.Component {
 
         })
         e.stopPropagation()
-        console.log(this.state.quantity)
         console.log(e)
     }
 
@@ -63,7 +62,7 @@ class Header extends React.Component {
 
 
                             <ul className="nav navbar-nav navbar-right">
-                                <li><a href="/shoppingcart">Shopping Cart</a></li>
+                                <li><Link to ="/shoppingcart">Shopping Cart</Link></li>
                                 <li className="dropdown">
                                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Management <span className="caret"></span></a>
                                     <ul className="dropdown-menu">
