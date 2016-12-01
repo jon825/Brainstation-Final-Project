@@ -16,7 +16,7 @@ class SignIn extends Component {
     let self = this;
     e.preventDefault();
     axios
-      .post('http://localhost:3005/api/users/login',this.state)
+      .post('/api/users/login',this.state)
       .then((res) => {
         // console.log(res);
         if(res.status === 200){

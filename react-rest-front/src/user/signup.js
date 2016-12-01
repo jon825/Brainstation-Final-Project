@@ -23,7 +23,7 @@ class SignUp extends Component {
       })
     } else{
     axios
-      .post('http://localhost:3005/api/users/encrypt',this.state)
+      .post('/api/users/encrypt',this.state)
       .then( (res) =>{
         
         console.log(res);
