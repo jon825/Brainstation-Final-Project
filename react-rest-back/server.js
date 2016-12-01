@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Create instance of Mongoose and connect to our local
 // MongoDB database at the directory specified earilier.
-mongoose.connect('mongodb://localhost/data/db/');
+mongoose.connect('mongodb://brainstationfinal:nba2kfifa@ds115798.mlab.com:15798/brainstationfinal');
 
 // Log to console any errors or a successful connection.
 db.on('error', console.error.bind(console, 'connection error:'));
