@@ -13,7 +13,7 @@ class Header extends React.Component {
 
     };
     componentWillMount() {
-        axios.get('http://localhost:3005/strains')
+        axios.get('/strains')
             .then(res => {
                 let products = res.data;
                 this.setState({
