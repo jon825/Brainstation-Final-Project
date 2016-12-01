@@ -2,7 +2,7 @@ import React from 'react';
 
 class ShoppingCart extends React.Component{
     constructor(){
-        let price = this.props.totalprice
+        // let price = this.props.totalprice
         super();
         this.state={
            totalprice:price
@@ -16,7 +16,7 @@ class ShoppingCart extends React.Component{
         return(
             <div>
             Shopping Cart
-
+            {this.state.totalprice}
             </div>
 
 
