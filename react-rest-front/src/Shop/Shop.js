@@ -78,7 +78,7 @@ class ProductItem extends React.Component {
                     <img src={this.props.product.imagePath} alt="..." />
                     <div className="caption">
                         <h3>{this.props.product.name.replace(/_/g, " ")}</h3>
-                        <p>{this.props.product.strain_category}</p>
+                        <p>Category:{this.props.product.strain_category}</p>
                         <div>
                             <div className="price">${this.props.product.price}</div>
                             <p><a className="btn btn-primary" role="button" onClick={(evt)=>{this.props.handleAddButton(this.props.index, evt)}}>Add to Cart</a></p>
