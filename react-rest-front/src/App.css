@@ -50,16 +50,13 @@ body{
 }*/
 .hybrid{
   /*background-color:lightgreen;*/
-  border-color:lightgreen;
-  border: 5px solid; 
+  border: 5px solid, lightgreen; 
 }
 .sativa{
   /*background-color:lightcoral;*/
-  border-color:lightcoral;
-  border: 5px solid; 
+  border: 5px solid, lightcoral; 
 }
 .indica{
   /*/*background-color:skyblue;coc*/
-  border-color:skyblue;
-  border: 5px solid ;
+  border: 5px solid, skyblue ;
 }
