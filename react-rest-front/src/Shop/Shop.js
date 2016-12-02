@@ -73,7 +73,7 @@ class ProductItem extends React.Component {
                         <p>{this.props.product.strain_category}</p>
                         <div>
                             <div className="price">${this.props.product.price}</div>
-                            <p><a className="btn btn-primary" role="button" onClick={(evt)=>{this.props.handleAddButton(this.props.index, evt)}}>Button</a></p>
+                            <p><a className="btn btn-primary" role="button" onClick={(evt)=>{this.props.handleAddButton(this.props.index, evt)}}>Add to Cart</a></p>
                         </div>
                     </div>
                 </div>
