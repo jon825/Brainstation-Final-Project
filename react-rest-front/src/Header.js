@@ -67,7 +67,6 @@ class Header extends React.Component {
                                 <li><Link to ="/shoppingcart">Shopping Cart</Link></li>
                                 <li className="dropdown">
                                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Management <span className="caret"></span></a>
-      ]
                                 </li>
                             </ul>
                         </div>
