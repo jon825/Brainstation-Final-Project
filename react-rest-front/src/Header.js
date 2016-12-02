@@ -47,7 +47,7 @@ class Header extends React.Component {
         let products = this.state.products
         // console.log(this.props.products)
         return (
-            <div className="headerbar">
+            <div>
                 <nav className="navbar navbar-default">
                     <div className="container-fluid">
                         <div className="navbar-header">
@@ -67,12 +67,7 @@ class Header extends React.Component {
                                 <li><Link to ="/shoppingcart">Shopping Cart</Link></li>
                                 <li className="dropdown">
                                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Management <span className="caret"></span></a>
-                                    <ul className="dropdown-menu">
-                                        <li><a href="#">User Account</a></li>
-
-                                        <li role="separator" className="divider"></li>
-                                        <li><a href="#">Logout link</a></li>
-                                    </ul>
+      ]
                                 </li>
                             </ul>
                         </div>
