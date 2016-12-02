@@ -74,7 +74,7 @@ class ProductItem extends React.Component {
         return (
             
             <div className="col-xs-12 col-sm-6 col-md-3">
-                <div className={thumbnailcolor} onClick={this.props.handleClick} >
+                <div className="thumbnail" onClick={this.props.handleClick} >
                     <img src={this.props.product.imagePath} alt="..." />
                     <div className="caption">
                         <h3>{this.props.product.name.replace(/_/g, " ")}</h3>
