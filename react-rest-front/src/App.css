@@ -39,24 +39,18 @@ body {
   padding:5px;
   border-radius:20%;
 }
-/*.background{
-  background-color: dodgerblue;
+.thumbnail{
+  border:5px solid;
 }
-body{
-  background-color:deepskyblue
-}
-.navbar{
-  background-color:lightskyblue
-}*/
 .hybrid{
-  /*background-color:lightgreen;*/
-  border: 5px solid, lightgreen; 
+  background-color:lightgreen;
+  /*border: 5px solid, lightgreen; */
 }
 .sativa{
-  /*background-color:lightcoral;*/
-  border: 5px solid, lightcoral; 
+  background-color:lightcoral;
+  /*border: 5px solid, lightcoral; */
 }
 .indica{
-  /*/*background-color:skyblue;coc*/
-  border: 5px solid, skyblue ;
+  background-color:skyblue;
+  /*border: 5px solid, skyblue ;*/
 }
