@@ -61,20 +61,20 @@ render() {
 
 class ProductItem extends React.Component {
     render() {
-        // let thumbnailcolor = ""
-        // if(this.props.product.strain.category == "hybrid"){
-        //     thumbnailcolor = "thumbnail hybrid"
-        // } else if(this.props.product.strain.category == "indica"){
-        //     thumbnailcolor = "thumbnail indica"
-        // } else if(this.props.product.strain.category == "sativa"){
-        //     thumbnailcolor = "thumbnail sativa"
-        // }
+        let thumbnailcolor = ""
+        if(this.props.product.strain_category == "hybrid"){
+            thumbnailcolor = "thumbnail hybrid"
+        } else if(this.props.product.strain_category == "indica"){
+            thumbnailcolor = "thumbnail indica"
+        } else if(this.props.product.strain_category == "sativa"){
+            thumbnailcolor = "thumbnail sativa"
+        }
 
         // console.log(productArray)
         return (
             
             <div className="col-xs-12 col-sm-6 col-md-3">
-                <div className="thumbnail" onClick={this.props.handleClick} >
+                <div className={thumbnailcolor} onClick={this.props.handleClick} >
                     <img src={this.props.product.imagePath} alt="..." />
                     <div className="caption">
                         <h3>{this.props.product.name.replace(/_/g, " ")}</h3>
