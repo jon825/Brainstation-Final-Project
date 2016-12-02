@@ -19,7 +19,7 @@ class ShoppingCart extends React.Component {
                 <div className="col-sm-6 col-md-6">
                     <ul className="list-group">
                         <li className="list-group-item">
-                            <strong>Title</strong>
+                            <strong>Total Price</strong>
                             <span className="label label-success">${this.props.totalprice}</span>
 
                         </li>
