@@ -43,14 +43,14 @@ body {
   border:5px solid;
 }
 .hybrid{
-  background-color:lightgreen;
+  border-color:lightgreen;
   /*border: 5px solid, lightgreen; */
 }
 .sativa{
-  background-color:lightcoral;
+ border-color:lightcoral;
   /*border: 5px solid, lightcoral; */
 }
 .indica{
-  background-color:skyblue;
+  border-color:skyblue;
   /*border: 5px solid, skyblue ;*/
 }
