@@ -47,7 +47,7 @@ class Header extends React.Component {
         let products = this.state.products
         // console.log(this.props.products)
         return (
-            <div>
+            <div className="headerbar">
                 <nav className="navbar navbar-default">
                     <div className="container-fluid">
                         <div className="navbar-header">
