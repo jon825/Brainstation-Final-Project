@@ -15,10 +15,16 @@ class ShoppingCart extends React.Component{
         console.log(this.props.totalprice)
         console.log(this.props.quantity)
         return(
-            <div>
-            Shopping Cart
-            {this.props.totalprice}
-            {this.props.quantity}
+            <div className="row">
+                <div> className="col-sm-6 col-md-6">
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <strong>Title</strong>
+                            <span className="label label-success">${this.props.totalprice}</span>
+                            
+                            </li>
+                            </ul>
+                            </div>
             </div>
 
 
