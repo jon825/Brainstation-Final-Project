@@ -49,11 +49,14 @@ body{
   background-color:lightskyblue
 }*/
 .hybrid{
-  background-color:lightgreen
+  /*background-color:lightgreen;*/
+  border-color:lightgreen
 }
 .sativa{
-  background-color:lightcoral
+  /*background-color:lightcoral;*/
+  border-color:lightcoral;
 }
 .indica{
-  background-color:skyblue
+  /*/*background-color:skyblue;*/
+  border-color:skyblue
 }
