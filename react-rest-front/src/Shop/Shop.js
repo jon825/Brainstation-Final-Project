@@ -47,7 +47,7 @@ render() {
         productArray.push(<ProductItem key={i} index={i} handleClick={() => { this.handleClick(i) } } product={this.props.products[i]} handleAddButton = {this.props.handleAddButton} />)
     }
     return (
-        <div className="container">
+        <div className="container background">
             <div className="row">
                 {productArray}
 
