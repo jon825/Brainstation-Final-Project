@@ -61,14 +61,14 @@ render() {
 
 class ProductItem extends React.Component {
     render() {
-        let thumbnailcolor = ""
-        if(this.props.product.strain.category == "hybrid"){
-            thumbnailcolor = "thumbnail hybrid"
-        } else if(this.props.product.strain.category == "indica"){
-            thumbnailcolor = "thumbnail indica"
-        } else if(this.props.product.strain.category == "sativa"){
-            thumbnailcolor = "thumbnail sativa"
-        }
+        // let thumbnailcolor = ""
+        // if(this.props.product.strain.category == "hybrid"){
+        //     thumbnailcolor = "thumbnail hybrid"
+        // } else if(this.props.product.strain.category == "indica"){
+        //     thumbnailcolor = "thumbnail indica"
+        // } else if(this.props.product.strain.category == "sativa"){
+        //     thumbnailcolor = "thumbnail sativa"
+        // }
 
         // console.log(productArray)
         return (
