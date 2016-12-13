@@ -7,7 +7,7 @@ class Header extends React.Component {
     constructor() {
         super();
         this.state = {
-            products: [],
+            products: ['hello'],
             quantity: 0,
             totalprice: 0,
         }
@@ -72,7 +72,7 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </nav>
-                {React.cloneElement(this.props.children, { products: products, handleAddButton: this.handleAddButton.bind(this), totalprice: this.state.totalprice , quantity: this.state.quantity})}
+                {React.cloneElement(this.props.children, { products: this.state.products, handleAddButton: this.handleAddButton.bind(this), totalprice: this.state.totalprice , quantity: this.state.quantity})}
             </div>
         )
     }
