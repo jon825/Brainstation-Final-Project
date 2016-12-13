@@ -23,7 +23,7 @@ class ShoppingCart extends React.Component {
                             <h2>{this.props.quantity}</h2>
                             <strong>Total Price:</strong>
                             <h2>${this.props.totalprice}</h2>
-                            <h2>{this.props.products}</h2>
+                            <li>{this.props.products}</li>
 
                         </li>
                     </ul>

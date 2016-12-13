@@ -7,7 +7,7 @@ class Header extends React.Component {
     constructor() {
         super();
         this.state = {
-            products: ['hello'],
+            products: ['hello', 'hi'],
             quantity: 0,
             totalprice: 0,
         }
