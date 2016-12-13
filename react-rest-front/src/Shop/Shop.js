@@ -38,23 +38,23 @@ class Shop extends React.Component {
     // }
 
 
-render() {
-    console.log(this.props.products)
+    render() {
+        console.log(this.props.products)
 
 
-    let productArray = [];
-    for (let i = 0; i < this.props.products.length; i++) {
-        productArray.push(<ProductItem key={i} index={i} handleClick={() => { this.handleClick(i) } } product={this.props.products[i]} handleAddButton = {this.props.handleAddButton} />)
-    }
-    return (
-        <div className="container background">
-            <div className="row">
-                {productArray}
+        let productArray = [];
+        for (let i = 0; i < this.props.products.length; i++) {
+            productArray.push(<ProductItem key={i} index={i} handleClick={() => { this.handleClick(i) } } product={this.props.products[i]} handleAddButton={this.props.handleAddButton} />)
+        }
+        return (
+            <div className="container background">
+                <div className="row">
+                    {productArray}
 
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 }
 
 
@@ -62,26 +62,26 @@ render() {
 class ProductItem extends React.Component {
     render() {
         let thumbnailcolor = ""
-        if(this.props.product.strain_category == "hybrid"){
+        if (this.props.product.strain_category == "hybrid") {
             thumbnailcolor = "thumbnail hybrid"
-        } else if(this.props.product.strain_category == "indica"){
+        } else if (this.props.product.strain_category == "indica") {
             thumbnailcolor = "thumbnail indica"
-        } else if(this.props.product.strain_category == "sativa"){
+        } else if (this.props.product.strain_category == "sativa") {
             thumbnailcolor = "thumbnail sativa"
         }
 
         // console.log(productArray)
         return (
-            
+
             <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className={thumbnailcolor} onClick={this.props.handleClick} >
                     <img src={this.props.product.imagePath} alt="..." />
                     <div className="caption">
                         <h3>{this.props.product.name.replace(/_/g, " ")}</h3>
-                        <p>type:{this.props.product.strain_category}</p>
+                        <p>{this.props.product.strain_category}</p>
                         <div>
                             <div className="price">${this.props.product.price}</div>
-                            <p><a className="btn btn-primary" role="button" onClick={(evt)=>{this.props.handleAddButton(this.props.index, evt)}}>Add to Cart</a></p>
+                            <p><a className="btn btn-primary" role="button" onClick={(evt) => { this.props.handleAddButton(this.props.index, evt) } }>Add to Cart</a></p>
                         </div>
                     </div>
                 </div>
